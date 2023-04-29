@@ -8,7 +8,7 @@ The model has two major changes made to the payoff function of the approved Gian
 •	Maturity Pay Down ~ if an obligor is retired from the collateral pool before the trade maturity, the associated notional amount is paid down from the pool.  
 •	Default Pay Down ~ if an obligor defaults before the trade maturity and its own maturity, the recovery is paid down from the pool.
 
-The valuation model serves the purpose of pricing a variable maturity GiantFirstLoss trade. The trade has a non-vanilla collateral debt obligation (CDO) structure, in which the maturities of the underlying obligors could be different from that of the CDO trade (ref. https://finpricing.com/lib/FiBond.html). 
+The valuation model serves the purpose of pricing a variable maturity GiantFirstLoss trade. The trade has a non-vanilla collateral debt obligation (CDO) structure, in which the maturities of the underlying obligors could be different from that of the CDO trade. 
 
 Assume the underlying collateral pool is a set of obligors, , in which each obligor has maturity , a recovery rate , and a notional amount . Let the maturity of the trade be . 
 
@@ -51,4 +51,8 @@ The variable maturity GiantFirstLoss trade valuation model has been investigated
 Compared with the approved GiantFirstLoss trade, two non-vanilla features, defined as default pay down and maturity pay down, are implemented in the submitted model template to model the change of the pay off function due to the early retirement of the obligor in the collateral pool. Both the default correlation model and the sensitivity computation remain unchanged.  
 
 The modelling restriction of the variable maturity GiantFirstLoss trade is that the number of MC path should be greater than 500,000. This restriction is directly inferred from the approved GiantFirstLoss trade.  
+
+Reference:
+
+https://finpricing.com/FinPricing-ProductBrochure.pdf
 
